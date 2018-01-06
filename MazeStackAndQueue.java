@@ -505,7 +505,23 @@ public class MazeStackAndQueue extends JPanel
 		    y = Integer.parseInt(col.getText());
 		} catch (NumberFormatException n)
 		{
-		    n.printStackTrace();
+		    JFrame errorFrame = new JFrame();
+		    errorFrame.setTitle("ERROR");
+		    errorFrame.setLayout(new FlowLayout());
+		    errorFrame.setSize(400, 150);
+		    errorFrame.setLocation(500, 300);
+		    errorFrame.add(new JLabel("Error! Please input size of maze into boxes below!"));
+		    errorFrame.setVisible(true);
+		    
+		}catch(IllegalArgumentException i)
+		{
+		    JFrame errorFrame = new JFrame();
+		    errorFrame.setTitle("ERROR");
+		    errorFrame.setLayout(new FlowLayout());
+		    errorFrame.setSize(400, 150);
+		    errorFrame.setLocation(500, 300);
+		    errorFrame.add(new JLabel("Error! Please input size of maze into boxes below!"));
+		    errorFrame.setVisible(true);
 		}
 	    }
 	    // making the board out of the coordinates
